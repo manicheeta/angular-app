@@ -1,0 +1,105 @@
+<nb-layout-header class="header">
+    <h5>Welcome to User's ToDo page !</h5></nb-layout-header>
+  
+    <h1> Details for Top 5 Todos.</h1>
+  <div>
+    <table class="table">
+      <thead style="background-color:rgb(103, 126, 112)">
+        <tr>
+          <th scope="col">ToDo Post Id</th>
+          <th scope="col">ToDo user Id</th>
+          <th scope="col">ToDo Title</th>
+          <th scope="col">Task Status</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let t of todos">
+        <ng-container *ngIf="t.id <5"> 
+            <tr *ngIf="!t.completed ">
+          <th scope="row">{{ t.id }}</th>
+          <td>{{ t.userId }}</td>
+          <td>{{ t.title }}</td>
+          <td>{{ t.completed }}</td>
+        </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+      <!-- <h1> Details for Top 5 Todos.</h1>
+  <div>
+    <table class="table">
+      <thead style="background-color:rgb(103, 126, 112)">
+        <tr>
+          <th scope="col">ToDo Post Id</th>
+          <th scope="col">ToDo user Id</th>
+          <th scope="col">ToDo Title</th>
+          <th scope="col">Task Status</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let t of todos">
+            <tr *ngIf="t.userId < 3">
+          <th scope="row">{{ t.id }}</th>
+          <td>{{ t.userId }}</td>
+          <td>{{ t.title }}</td>
+          <td>{{ t.completed }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <h1> Details for Top 5 Todos.</h1>
+<div>
+    <table class="table">
+      <thead style="background-color:rgb(103, 126, 112)">
+        <tr>
+          <th scope="col">ToDo Post Id</th>
+          <th scope="col">ToDo user Id</th>
+          <th scope="col">ToDo Title</th>
+          <th scope="col">Task Status</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let t of todos">
+        <tr *ngIf="t.id < 6">
+          <th scope="row">{{ t.id }}</th>
+          <td>{{ t.userId }}</td>
+          <td>{{ t.title }}</td>
+          <td>{{ t.completed }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div> -->
+  
+  
+  
+  
+  <!-- <tbody *ngFor="let t of todos">
+      <ng-container *ngIf="t.id <5"> 
+          <tr *ngIf="!t.completed ">
+        <th scope="row">{{ t.id }}</th>
+        <td>{{ t.userId }}</td>
+        <td>{{ t.title }}</td>
+        <td>{{ t.completed }}</td>
+      </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div> -->
+<!-- <tbody *ngFor="let t of todos">
+   
+        <tr *ngIf="!t.completed === true ">  <=== ( ! is for not true )  otherwise it is true
+          
+      <th scope="row">{{ t.id }}</th>
+      <td>{{ t.userId }}</td>
+      <td>{{ t.title }}</td>
+      <td>{{ t.completed }}</td>
+    </tr>
+    </ng-container>
+  </tbody>
+</table>
+</div> -->

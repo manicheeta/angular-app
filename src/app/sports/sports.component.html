@@ -1,0 +1,35 @@
+
+    <h1>2019 Batsman Stats.</h1>
+    <table class="table table-bordered table-sm">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Batsman Name</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Match</th>
+            <th scope="col">Ins</th>
+            <th scope="col">no</th>
+            <th scope="col">Score</th>
+            <th scope="col">Balls</th>
+            <th scope="col">Hs</th>
+            <th scope="col">Hundreds</th>
+            <th scope="col">Strike Rate</th>
+            <th scope="col">Average</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let batsman of batsmansScores">
+            <td>{{ batsman.name }}</td>
+            <td>{{ batsman.team }}</td>
+            <td>{{ batsman.match }}</td>
+            <td>{{ batsman.ins }}</td>
+            <td>{{ batsman.no }}</td>
+            <td>{{ batsman.score }}</td>
+            <td>{{ batsman.balls }}</td>
+            <td>{{ batsman.hs }}</td>
+            <td>{{ batsman.hundreds }}</td>
+            <td>{{ (batsman.score / batsman.balls) * 100 | number: '1.2-2' }}</td>
+            <td>{{ (batsman.score / batsman.match) | number: '1.2-2' }}</td>
+            </tr>
+            </tbody>
+            </table>
+    

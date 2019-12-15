@@ -1,0 +1,54 @@
+<nb-layout-header class="header">
+    <h5>Welcome to Comments page !</h5></nb-layout-header>
+  
+  <h1> Listing Comments Here</h1>
+  <div>
+    <table class="table">
+      <thead style="background-color:rgb(103, 126, 112)">
+        <tr>
+          <th scope="col">Post Id</th>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Body</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let c of comments">
+        <tr *ngIf="c.postId < 5">
+          <th scope="row">{{ c.postId }}</th>
+          <td>{{ c.id }}</td>
+          <td>{{ c.name }}</td>
+          <td>{{ c.email }}</td>              
+          <td>{{ c.body }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h1> Listing Comments Here</h1>
+      <div>
+        <table class="table">
+          <thead style="background-color:rgb(103, 126, 112)">
+            <tr>
+              <th scope="col">Post Id</th>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Body</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let c of comments">
+            <tr *ngIf="c.id < 5">
+              <th scope="row">{{ c.postId }}</th>
+              <td>{{ c.id }}</td>
+              <td>{{ c.name }}</td>
+              <td>{{ c.email }}</td>              
+              <td>{{ c.body }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      
+    
